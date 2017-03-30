@@ -1,0 +1,59 @@
+﻿<Controls:MetroWindow
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:fa="http://schemas.fontawesome.io/icons/"
+                      xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" x:Class="SL.Library.WPF.MainWindow"
+                      Title="分布式资源整理分享平台 - SightLand Index Library"
+                      Height="600"
+                      Width="800"
+                      BorderThickness="1"
+                      Icon="Resources/LogoMain.ico"
+                      TitleCharacterCasing="Normal"
+                      >
+    <Controls:MetroWindow.Style>
+        <StaticResource ResourceKey="VSWindowStyleKey"/>
+    </Controls:MetroWindow.Style>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" Grid.Column="0" Grid.Row="0">
+            <MenuItem Header="数据(_D)">
+                <MenuItem Header="还原数据库（_R)..." MinWidth="150">
+                    <MenuItem.Icon>
+                        <fa:ImageAwesome Icon="Database"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="备份数据库（_B)..." />
+                <Separator />
+                <MenuItem Header="设置（_S)..." />
+                <Separator />
+                <MenuItem Header="MenuItem" />
+            </MenuItem>
+        </Menu>
+        <ToolBarPanel Grid.Column="0" Grid.Row="1">
+            <ToolBar x:Name="toolBar" HorizontalAlignment="Left">
+                <Button>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Cog" Height="16" Width="16" Margin="2,0,2,0" Foreground="{StaticResource AccentBaseColorBrush}"/>
+                        <TextBlock VerticalAlignment="Center" Margin="2,0,2,0" ><Run Text="Text"/></TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarPanel>
+        <TabControl x:Name="tabControl"  Grid.Column="0" Grid.Row="2">
+            <TabItem Header="TabItem">
+                <Grid/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>
